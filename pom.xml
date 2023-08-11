@@ -73,10 +73,13 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.10</version>
-				<!--<configuration>
-					<output>file</output>
-					<append>true</append>
-				</configuration>-->
+				<configuration>
+					<excludes>
+						<exclude>**/com/prashanthIt/entity/**</exclude>
+						<exclude>**/com/prashanthIt/Application.class</exclude>
+						<exclude>**/com/prashanthIt/ServletInitializer.class</exclude>
+					</excludes>
+				</configuration>
 				<executions>
 					<execution>
 						<id>jacoco-initialize</id>
