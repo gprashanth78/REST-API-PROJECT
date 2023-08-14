@@ -3,6 +3,7 @@ package com.prashanthIt.service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,20 +40,23 @@ public class BookDetailsServiceImpl implements BookDetailsService {
 
 	@Override
 	public List<BookDetails> getAllBookDetails() {
-		// TODO Auto-generated method stub
-		return null;
+		return bookRepo.findAll();
 	}
 
 	@Override
 	public BookDetails getBookDetailsById(Integer BookId) {
-		// TODO Auto-generated method stub
+		Optional<BookDetails> findById = bookRepo.findById(BookId);
+		if (findById.isPresent()) {
+			BookDetails bookDetails = findById.get();
+			return bookDetails;
+		}
 		return null;
 	}
 
 	@Override
 	public boolean deleteBookDetailsById(Integer BookId) {
-		// TODO Auto-generated method stub
-		return false;
+		bookRepo.deleteById(BookId);
+		return true;
 	}
 
 }

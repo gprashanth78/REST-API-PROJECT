@@ -1,12 +1,9 @@
 package com.prashanthIt.entity;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -31,7 +28,9 @@ public class CategoryDetails {
 	private Integer categoryId;
 	@Column(name = "CATEGORY_NAME")
 	private String categoryName;
-
-	@OneToMany(mappedBy = "category")
-	private List<BookDetails> bookDetails;
+	/*
+	 * @OneToMany(mappedBy = "categoryDetails", cascade = CascadeType.ALL)
+	 * 
+	 * @JsonBackReference private Set<BookDetails> bookDetails;
+	 */
 }
