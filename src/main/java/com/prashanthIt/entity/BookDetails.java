@@ -48,5 +48,5 @@ public class BookDetails {
 
 	@ManyToOne
 	@JoinColumn(name = "CATEGORY_ID")
-	private CategoryDetails category;
+	private CategoryDetails categoryDetails;
 }
