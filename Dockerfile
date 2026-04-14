@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk-jammy
+FROM openjdk:17
 
 COPY target/01-Book-Store-0.0.1-SNAPSHOT.jar /usr/app/
 
