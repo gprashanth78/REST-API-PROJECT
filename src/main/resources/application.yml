@@ -2,10 +2,10 @@ server:
   port: 9090
 spring:
   datasource:
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521/XE
-    username: system
-    password: jdbc
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/prashanthdb
+    username: root
+    password: Prash@320
   jpa:
     hibernate:
       ddl-auto: update

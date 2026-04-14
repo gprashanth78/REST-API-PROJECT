@@ -2,31 +2,18 @@ package com.prashanthIt.entity;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import jakarta.persistence.*;
 
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "SB_BOOK_DTLS_TBL")
 public class BookDetails {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "BOOK_ID")
 	private Integer bookId;
 	@Column(name = "BOOK_NAME")

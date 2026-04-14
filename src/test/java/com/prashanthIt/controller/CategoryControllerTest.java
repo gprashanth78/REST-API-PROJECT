@@ -1,20 +1,20 @@
 package com.prashanthIt.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+/*import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MockMvc;*/
 
 import com.prashanthIt.service.CategoryService;
 
-@WebMvcTest(value = CategoryController.class)
+//@WebMvcTest(value = CategoryController.class)
 public class CategoryControllerTest {
-
-	@MockBean
+/*
+	//@MockBean
 	private CategoryService service;
 
 	@Autowired
-	private MockMvc mockMvc;
+	private MockMvc mockMvc;*/
 
 	/*
 	 * @Test public void testSaveCategoryDetails() throws Exception {
