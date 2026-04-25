@@ -1,9 +1,9 @@
-FROM openjdk:17
+FROM eclipse-temurin:21-jre-jammy
 
-COPY target/01-Book-Store-0.0.1-SNAPSHOT.jar /usr/app/
+COPY target/*.jar /usr/app/
 
 WORKDIR /usr/app
 
-EXPOSE 8080
+EXPOSE 9090
 
-ENTRYPOINT ["java", "-jar", "01-Book-Store-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "01-Book-Store-App-1-0.0.1-SNAPSHOT.jar"]
